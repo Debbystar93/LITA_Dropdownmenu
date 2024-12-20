@@ -1,0 +1,198 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    color: black;
+}
+
+/* Logo Styling */
+header h1 {
+    font-size: 30px;
+    margin: 0;
+    font-weight: bold;
+}
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li img {
+    margin-left: 5px;
+    vertical-align: middle;
+}
+
+nav ul ul {
+    display: none;
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px 0;
+    border-radius: 5px;
+}
+
+nav ul li:hover > ul {
+    display: block;
+}
+
+nav ul ul li {
+    margin: 0;
+    padding: 10px 20px;
+}
+
+nav ul ul li a {
+    display: flex;
+    align-items: center;
+}
+
+nav ul ul li a img {
+    margin-right: 10px;
+}
+
+/* Authentication Nav */
+.auth-nav1,
+.auth-nav2 {
+    margin-left: 15px;
+}
+
+.auth-nav1 a,
+.auth-nav2 a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Content Section */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+
+.content .text {
+    max-width: 50%;
+}
+
+.content h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.content .paragraph {
+    font-size: 20px;
+    margin: 20px 0;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.content img {
+    max-width: 40%;
+    height: auto;
+}
+
+/* Client Icons */
+.iconmark {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.iconmark img {
+    max-width: 100px;
+    height: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #fff;
+        border-top: 1px solid #ccc;
+        z-index: 1000;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content .text {
+        max-width: 100%;
+    }
+
+    .content img {
+        max-width: 80%;
+        margin-top: 20px;
+    }
+
+    .iconmark {
+        flex-wrap: wrap;
+    }
+
+    .iconmark img {
+        margin: 5px;
+    }
+}
